@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        fieldset {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Page</h1>
+
+    <!-- Ordered List with Roman Numerals -->
+    <section>
+        <h2>Steps to Register:</h2>
+        <ol type="I">
+            <li>Fill out the registration form</li>
+            <li>Verify your email address</li>
+            <li>Complete your profile</li>
+            <li>Start using our services</li>
+        </ol>
+    </section>
+
+    <!-- External Image from Pexels -->
+    <section>
+        <h2>Our Office:</h2>
+        <img src="https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg" 
+             alt="Modern office workspace" 
+             width="600"
+             style="max-width: 100%; height: auto;">
+    </section>
+
+    <!-- Contacts Table -->
+    <section>
+        <h2>Contact List:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>123 Main St, Nairobi</td>
+                    <td>+254 700 111 222</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>456 Park Ave, Mombasa</td>
+                    <td>+254 700 333 444</td>
+                    <td>jane@example.com</td>
+                </tr>
+                <tr>
+                    <td>Mike Johnson</td>
+                    <td>789 Hill Rd, Kisumu</td>
+                    <td>+254 700 555 666</td>
+                    <td>mike@example.com</td>
+                </tr>
+                <tr>
+                    <td>Sarah Williams</td>
+                    <td>321 Valley Dr, Nakuru</td>
+                    <td>+254 700 777 888</td>
+                    <td>sarah@example.com</td>
+                </tr>
+                <tr>
+                    <td>David Brown</td>
+                    <td>654 Lake View, Eldoret</td>
+                    <td>+254 700 999 000</td>
+                    <td>david@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Registration Form -->
+    <section>
+        <h2>Registration Form</h2>
+        <form id="registration-form" method="post" action="/submit">
+            <!-- Basic Information -->
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" 
+                       placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" 
+                       placeholder="example@domain.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" 
+                       placeholder="At least 8 characters" 
+                       minlength="8" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <!-- Dropdown Menu -->
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>Select your country</option>
+                    <option value="kenya">Kenya</option>
+                    <option value="uganda">Uganda</option>
+                    <option value="tanzania">Tanzania</option>
+                    <option value="rwanda">Rwanda</option>
+                </select>
+            </div>
+
+            <!-- Radio Buttons -->
+            <fieldset>
+                <legend>Gender:</legend>
+                <div class="form-group">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                </div>
+                <div class="form-group">
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <div class="form-group">
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </fieldset>
+
+            <!-- Checkboxes -->
+            <fieldset>
+                <legend>Interests (Select all that apply):</legend>
+                <div class="form-group">
+                    <input type="checkbox" id="tech" name="interests" value="tech">
+                    <label for="tech">Technology</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="sports" name="interests" value="sports">
+                    <label for="sports">Sports</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="music" name="interests" value="music">
+                    <label for="music">Music</label>
+                </div>
+            </fieldset>
+
+            <!-- Additional Information -->
+            <div class="form-group">
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" 
+                          placeholder="Any special requirements?"></textarea>
+            </div>
+
+            <!-- Form Submission -->
+            <div class="form-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+    </section>
+</body>
+</html>
